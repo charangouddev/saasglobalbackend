@@ -19,7 +19,7 @@ app.get("/", (req,res) => {
 })
 
 // app.use("/api/auth", authRoutes)
-app.use("/api/comment", commentRoutes)
+app.use("/comment", commentRoutes)
 
 const PORT = process.env.PORT
 app.listen(PORT, ()=> {
