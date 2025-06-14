@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./config/mongodb");
-const connectSQL = require("./config/sqldb");
+// const connectSQL = require("./config/sqldb");
 // const authRoutes = require("./routes/authRoutes")
 const commentRoutes = require("./routes/commentRoutes")
 require("dotenv").config()
@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 connectDB();
-connectSQL();
+// connectSQL();
 
 app.get("/", (req,res) => {
     res.send("Welcome to API")
