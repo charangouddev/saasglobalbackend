@@ -1,4 +1,4 @@
-const Comment = require("../models/Comment"); // Adjust the path as needed
+const Comment = require("../models/comment");
 
 const addComment = async (req, res) => {
     const { comment } = req.body;
