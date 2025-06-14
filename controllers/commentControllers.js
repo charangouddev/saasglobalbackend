@@ -16,4 +16,13 @@ const addComment = async (req, res) => {
     }
 };
 
-module.exports = { addComment };
+const getComment = async (req, res) => {
+    try {
+        const comments = await Comment.find();
+        res.status(200).json({ message: "Comments retrieved successfully", data: comments });
+    } catch (error) {
+        res.status(500).json({ message: "Error retrieving comments", error: error.message });
+    }
+};
+
+module.exports = { addComment, getComment };
